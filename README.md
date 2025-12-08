@@ -9,6 +9,14 @@
 </div>
 
 
+<h2>Project fork</h2>
+<p>This project was forked and upgraded to work with Cuda 12.4 GPU support, plus a conda environment for easy to install</p>
+<p>Simply clone, install anaconda and run:</p>
+<p>conda env create -f environment.yml</p>
+<p>conda activate vibevoice</p>
+<p>Edit the .env.example file with your hugging face token and rename it to .env</p>
+<p>then run the demo from the demo folder "python vibevoice_realtime_demo.py"</p>
+
 <div align="center">
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="Figures/VibeVoice_logo_white.png">
