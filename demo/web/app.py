@@ -62,6 +62,9 @@ class StreamingTTSService:
         if device == "mps" and not torch.backends.mps.is_available():
             print("Warning: MPS not available. Falling back to CPU.")
             device = "cpu"
+        if device == "cuda" and not torch.cuda.is_available():
+            print("Warning: CUDA not available or Torch not compiled with CUDA. Falling back to CPU.")
+            device = "cpu"
         self.device = device
         self._torch_device = torch.device(device)
 

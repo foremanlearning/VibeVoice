@@ -1,0 +1,35 @@
+name: vibevoice
+channels:
+  - pytorch
+  - nvidia
+  - conda-forge
+  - defaults
+
+dependencies:
+  # Core interpreter and tooling
+  - python=3.12
+  - pip
+  - setuptools>=61.0
+
+  # Numeric / scientific stack
+  - numpy
+  - scipy
+
+  # PyTorch stack via conda (CUDA 12.4)
+  - pytorch
+  - torchvision
+  - torchaudio
+  - pytorch-cuda=12.4
+
+  # Project dependencies from pyproject.toml, installed via pip
+  - pip:
+      - accelerate==1.6.0
+      - transformers==4.51.3
+      - llvmlite>=0.40.0
+      - numba>=0.57.0
+      - diffusers
+      - tqdm
+      - python-dotenv
+      - numpy
+      - scipy
+      - -e .
