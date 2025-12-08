@@ -67,17 +67,14 @@ You must configure your environment with a Hugging Face User Access Token.
 
 #### 4\. Environment Setup
 
-Create and activate the Conda environment, then install dependencies.
+Create the environment using Conda.
 
 ```bash
-# Create the environment (adjust python version if specified in requirements, usually 3.10+)
-conda create -n vibevoice python=3.10 -y
+# Create the environment from the provided configuration
+conda env create -f environment.yml
 
 # Activate the environment
 conda activate vibevoice
-
-# Install dependencies
-pip install -r requirements.txt
 ```
 
 #### 5\. Running VibeVoice
@@ -85,11 +82,11 @@ pip install -r requirements.txt
 To launch the demo or inference scripts:
 
 ```bash
-# Example: Launch the Web UI (check repository for exact script name)
+# Example: Launch the Web UI
 python app.py
 
 # Or launch the realtime websocket demo
-python demo/realtime_websocket.py
+python demo/vibevoice_realtime_demo.py
 ```
 
 -----
@@ -102,6 +99,3 @@ python demo/realtime_websocket.py
   * **License:** This model is intended for **research and development purposes only**.
 
 *For more examples and details, visit the [Project Page](https://microsoft.github.io/VibeVoice).*
-
-```
-```
