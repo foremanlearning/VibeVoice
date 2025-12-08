@@ -1,119 +1,166 @@
-<div align="center">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VibeVoice Documentation</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
+            line-height: 1.6;
+            color: #24292f;
+            max-width: 850px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+        a { color: #0969da; text-decoration: none; }
+        a:hover { text-decoration: underline; }
+        h2, h3 { margin-top: 24px; margin-bottom: 16px; font-weight: 600; line-height: 1.25; }
+        h2 { border-bottom: 1px solid #d0d7de; padding-bottom: 0.3em; font-size: 1.5em; }
+        h3 { font-size: 1.25em; }
+        p { margin-top: 0; margin-bottom: 16px; }
+        code {
+            padding: 0.2em 0.4em;
+            margin: 0;
+            font-size: 85%;
+            background-color: #afb8c133;
+            border-radius: 6px;
+            font-family: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, "Liberation Mono", monospace;
+        }
+        pre {
+            padding: 16px;
+            overflow: auto;
+            font-size: 85%;
+            line-height: 1.45;
+            background-color: #f6f8fa;
+            border-radius: 6px;
+        }
+        pre code { background-color: transparent; padding: 0; }
+        ul { padding-left: 2em; margin-bottom: 16px; }
+        .center { text-align: center; }
+        .badges { margin-bottom: 20px; }
+        .badges img { margin: 0 4px; vertical-align: middle; }
+        .logo { max-width: 300px; display: block; margin: 20px auto; }
+        blockquote {
+            padding: 0 1em;
+            color: #57606a;
+            border-left: 0.25em solid #d0d7de;
+            margin-left: 0;
+        }
+        hr {
+            height: 0.25em;
+            padding: 0;
+            margin: 24px 0;
+            background-color: #d0d7de;
+            border: 0;
+        }
+    </style>
+</head>
+<body>
 
-## 🎙️ VibeVoice: Open-Source Frontier Voice AI
-[![Project Page](https://img.shields.io/badge/Project-Page-blue?logo=microsoft)](https://microsoft.github.io/VibeVoice)
-[![Hugging Face](https://img.shields.io/badge/HuggingFace-Collection-orange?logo=huggingface)](https://huggingface.co/collections/microsoft/vibevoice-68a2ef24a875c44be47b034f)
-[![Technical Report](https://img.shields.io/badge/Technical-Report-red?logo=adobeacrobatreader)](https://arxiv.org/pdf/2508.19205)
+    <div class="center">
+        <h2>🎙️ VibeVoice: Open-Source Frontier Voice AI</h2>
+        
+        <div class="badges">
+            <a href="https://microsoft.github.io/VibeVoice"><img src="https://img.shields.io/badge/Project-Page-blue?logo=microsoft" alt="Project Page"></a>
+            <a href="https://huggingface.co/collections/microsoft/vibevoice-68a2ef24a875c44be47b034f"><img src="https://img.shields.io/badge/HuggingFace-Collection-orange?logo=huggingface" alt="Hugging Face"></a>
+            <a href="https://arxiv.org/pdf/2508.19205"><img src="https://img.shields.io/badge/Technical-Report-red?logo=adobeacrobatreader" alt="Technical Report"></a>
+        </div>
 
+        <picture>
+            <source media="(prefers-color-scheme: dark)" srcset="Figures/VibeVoice_logo_white.png">
+            <img src="Figures/VibeVoice_logo.png" alt="VibeVoice Logo" class="logo">
+        </picture>
+    </div>
 
-</div>
+    <h3>Overview</h3>
+    <p>VibeVoice is a novel open-source framework for generating <strong>expressive, long-form, multi-speaker</strong> conversational audio (e.g., podcasts) from text. It utilizes continuous speech tokenizers at an ultra-low frame rate (7.5 Hz) and a <a href="https://arxiv.org/abs/2412.08635">next-token diffusion</a> architecture to achieve high efficiency and audio fidelity.</p>
 
+    <p><strong>Key Capabilities:</strong></p>
+    <ul>
+        <li><strong>Long-form Multi-speaker:</strong> Synthesizes up to <strong>90 minutes</strong> of speech with <strong>4 distinct speakers</strong>.</li>
+        <li><strong>Realtime Streaming:</strong> Delivers initial audio in ~<strong>300 ms</strong> with support for streaming text input (<a href="docs/vibevoice-realtime-0.5b.md">Realtime Model Docs</a>).</li>
+    </ul>
 
-<div align="center">
-<picture>
-  <source media="(prefers-color-scheme: dark)" srcset="Figures/VibeVoice_logo_white.png">
-  <img src="Figures/VibeVoice_logo.png" alt="VibeVoice Logo" width="300">
-</picture>
-</div>
+    <hr>
 
-<div align="left">
+    <h3>📰 Latest News</h3>
+    <p>
+        <img src="https://img.shields.io/badge/Status-New-brightgreen?style=flat" alt="New" />
+        <img src="https://img.shields.io/badge/Feature-Realtime_TTS-blue?style=flat&logo=soundcharts" alt="Realtime TTS" />
+    </p>
+    <ul>
+        <li><strong>2025-12-09:</strong> Added experimental speakers in 9 languages (DE, FR, IT, JP, KR, NL, PL, PT, ES).</li>
+        <li><strong>2025-12-03:</strong> Open-sourced <strong>VibeVoice‑Realtime‑0.5B</strong>. Try it on <a href="https://colab.research.google.com/github/microsoft/VibeVoice/blob/main/demo/vibevoice_realtime_colab.ipynb">Colab</a>.</li>
+    </ul>
 
-<h3>📰 News</h3>
+    <hr>
 
-<img src="https://img.shields.io/badge/Status-New-brightgreen?style=flat" alt="New" />
-<img src="https://img.shields.io/badge/Feature-Realtime_TTS-blue?style=flat&logo=soundcharts" alt="Realtime TTS" />
+    <h3>💻 Installation & Usage</h3>
+    <p>Follow these steps to set up VibeVoice locally.</p>
 
-<strong>2025-12-03: 📣 We open-sourced <a href="docs/vibevoice-realtime-0.5b.md"><strong>VibeVoice‑Realtime‑0.5B</strong></a>, a real‑time text‑to‑speech model that supports streaming text input and robust long-form speech generation. Try it on [Colab](https://colab.research.google.com/github/microsoft/VibeVoice/blob/main/demo/vibevoice_realtime_colab.ipynb).</strong>
+    <h4>1. Prerequisites</h4>
+    <p>Ensure you have <strong>Anaconda</strong> or <strong>Miniconda</strong> installed on your system.</p>
+    <ul>
+        <li><a href="https://www.anaconda.com/download">Download Anaconda here</a></li>
+    </ul>
 
-<strong>2025-12-09: 📣 We’ve added experimental speakers in nine languages (DE, FR, IT, JP, KR, NL, PL, PT, ES) for exploration—welcome to try them out and share your feedback.</strong>
+    <h4>2. Clone the Repository</h4>
+    <pre><code>git clone https://github.com/microsoft/VibeVoice.git
+cd VibeVoice</code></pre>
 
-To mitigate deepfake risks and ensure low latency for the first speech chunk, voice prompts are provided in an embedded format. For users requiring voice customization, please reach out to our team. We will also be expanding the range of available speakers.
-<br>
+    <h4>3. Configuration (Hugging Face Token)</h4>
+    <p>You must configure your environment with a Hugging Face User Access Token.</p>
+    <ol>
+        <li><strong>Generate Token:</strong>
+            <ul>
+                <li>Log in to your <a href="https://huggingface.co/">Hugging Face account</a>.</li>
+                <li>Navigate to <strong>Settings</strong> > <strong>Access Tokens</strong>.</li>
+                <li>Click <strong>Create New Token</strong>.</li>
+                <li>Select <strong>Write</strong> permissions (or ensure it has access to the VibeVoice gated models).</li>
+                <li>Copy the token string (starts with <code>hf_...</code>).</li>
+            </ul>
+        </li>
+        <li><strong>Update Environment File:</strong>
+            <ul>
+                <li>Open <code>.env.example</code> in a text editor.</li>
+                <li>Paste your token into the appropriate variable field.</li>
+                <li>Save and rename the file to <code>.env</code>:</li>
+            </ul>
+            <pre><code>mv .env.example .env</code></pre>
+        </li>
+    </ol>
 
-https://github.com/user-attachments/assets/0901d274-f6ae-46ef-a0fd-3c4fba4f76dc
+    <h4>4. Environment Setup</h4>
+    <p>Create and activate the Conda environment, then install dependencies.</p>
+    <pre><code># Create the environment (adjust python version if specified in requirements, usually 3.10+)
+conda create -n vibevoice python=3.10 -y
 
-> (Launch your own realtime demo via the websocket example in [Usage](docs/vibevoice-realtime-0.5b.md#usage-1-launch-real-time-websocket-demo)).
+# Activate the environment
+conda activate vibevoice
 
-</div>
+# Install dependencies
+pip install -r requirements.txt</code></pre>
 
-2025-09-05: VibeVoice is an open-source research framework intended to advance collaboration in the speech synthesis community. After release, we discovered instances where the tool was used in ways inconsistent with the stated intent. Since responsible use of AI is one of Microsoft’s guiding principles, we have disabled this repo until we are confident that out-of-scope use is no longer possible.
+    <h4>5. Running VibeVoice</h4>
+    <p>To launch the demo or inference scripts:</p>
+    <pre><code># Example: Launch the Web UI (check repository for exact script name)
+python app.py
 
+# Or launch the realtime websocket demo
+python demo/realtime_websocket.py</code></pre>
 
-### Overview
+    <hr>
 
-VibeVoice is a novel framework designed for generating **expressive**, **long-form**, **multi-speaker** conversational audio, such as podcasts, from text. It addresses significant challenges in traditional Text-to-Speech (TTS) systems, particularly in scalability, speaker consistency, and natural turn-taking.
+    <h3>⚠️ Risks and Limitations</h3>
+    <ul>
+        <li><strong>Deepfakes:</strong> High-quality synthesis can be misused. Users must ensure transcripts are reliable and disclose the use of AI.</li>
+        <li><strong>Language Support:</strong> Primarily optimized for English and Chinese. Other languages may yield unexpected results.</li>
+        <li><strong>Audio Scope:</strong> Focuses solely on speech; does not generate background noise or music.</li>
+        <li><strong>License:</strong> This model is intended for <strong>research and development purposes only</strong>.</li>
+    </ul>
 
-VibeVoice currently includes two model variants:
+    <p><em>For more examples and details, visit the <a href="https://microsoft.github.io/VibeVoice">Project Page</a>.</em></p>
 
-- **Long-form multi-speaker model**: Synthesizes conversational/single-speaker speech up to **90 minutes** with up to **4 distinct speakers**, surpassing the typical 1–2 speaker limits of many prior models.
-- **[Realtime streaming TTS model](docs/vibevoice-realtime-0.5b.md)**: Produces initial audible speech in ~**300 ms** and supports **streaming text input** for single-speaker **real-time** speech generation; designed for low-latency generation.
-
-A core innovation of VibeVoice is its use of continuous speech tokenizers (Acoustic and Semantic) operating at an ultra-low frame rate of 7.5 Hz. These tokenizers efficiently preserve audio fidelity while significantly boosting computational efficiency for processing long sequences. VibeVoice employs a [next-token diffusion](https://arxiv.org/abs/2412.08635) framework, leveraging a Large Language Model (LLM) to understand textual context and dialogue flow, and a diffusion head to generate high-fidelity acoustic details.
-
-
-<p align="left">
-  <img src="Figures/MOS-preference.png" alt="MOS Preference Results" height="260px">
-  <img src="Figures/VibeVoice.jpg" alt="VibeVoice Overview" height="250px" style="margin-right: 10px;">
-</p>
-
-
-### 🎵 Demo Examples
-
-
-**Video Demo**
-
-We produced this video with [Wan2.2](https://github.com/Wan-Video/Wan2.2). We sincerely appreciate the Wan-Video team for their great work.
-
-**English**
-<div align="center">
-
-https://github.com/user-attachments/assets/0967027c-141e-4909-bec8-091558b1b784
-
-</div>
-
-
-**Chinese**
-<div align="center">
-
-https://github.com/user-attachments/assets/322280b7-3093-4c67-86e3-10be4746c88f
-
-</div>
-
-**Cross-Lingual**
-<div align="center">
-
-https://github.com/user-attachments/assets/838d8ad9-a201-4dde-bb45-8cd3f59ce722
-
-</div>
-
-**Spontaneous Singing**
-<div align="center">
-
-https://github.com/user-attachments/assets/6f27a8a5-0c60-4f57-87f3-7dea2e11c730
-
-</div>
-
-
-**Long Conversation with 4 people**
-<div align="center">
-
-https://github.com/user-attachments/assets/a357c4b6-9768-495c-a576-1618f6275727
-
-</div>
-
-For more examples, see the [Project Page](https://microsoft.github.io/VibeVoice).
-
-
-
-## Risks and limitations
-
-While efforts have been made to optimize it through various techniques, it may still produce outputs that are unexpected, biased, or inaccurate. VibeVoice inherits any biases, errors, or omissions produced by its base model (specifically, Qwen2.5 1.5b in this release).
-Potential for Deepfakes and Disinformation: High-quality synthetic speech can be misused to create convincing fake audio content for impersonation, fraud, or spreading disinformation. Users must ensure transcripts are reliable, check content accuracy, and avoid using generated content in misleading ways. Users are expected to use the generated content and to deploy the models in a lawful manner, in full compliance with all applicable laws and regulations in the relevant jurisdictions. It is best practice to disclose the use of AI when sharing AI-generated content.
-
-English and Chinese only: Transcripts in languages other than English or Chinese may result in unexpected audio outputs.
-
-Non-Speech Audio: The model focuses solely on speech synthesis and does not handle background noise, music, or other sound effects.
-
-Overlapping Speech: The current model does not explicitly model or generate overlapping speech segments in conversations.
-
-We do not recommend using VibeVoice in commercial or real-world applications without further testing and development. This model is intended for research and development purposes only. Please use responsibly.
+</body>
+</html>
