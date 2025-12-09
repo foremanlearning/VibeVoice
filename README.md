@@ -12,7 +12,7 @@
 
 </div>
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/3583u_kZMok?si=SynncvZGqE7P7ZZR" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+[[<iframe width="560" height="315" src="https://www.youtube.com/embed/3583u_kZMok?si=SynncvZGqE7P7ZZR" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>](https://youtu.be/3583u_kZMok?si=M6m8ysBh3D3BtFFZ)](https://youtu.be/3583u_kZMok?si=M6m8ysBh3D3BtFFZ)
 
 ### Overview
 VibeVoice is a novel open-source framework for generating **expressive, long-form, multi-speaker** conversational audio (e.g., podcasts) from text. It utilizes continuous speech tokenizers at an ultra-low frame rate (7.5 Hz) and a [next-token diffusion](https://arxiv.org/abs/2412.08635) architecture to achieve high efficiency and audio fidelity.
